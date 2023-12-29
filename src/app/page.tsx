@@ -9,12 +9,17 @@ export default function Home() {
 
   return (
     <main className="flex w-full min-h-screen flex-col items-center justify-between ">
-      <div style={{ backgroundImage: `url(${backgroundImage.src})`,  backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        width: "100vw",
-        height: "100vh" }}>
-        <p>Put your money where you mouth is</p>
+      <div
+        style={{
+          backgroundImage: `url(${backgroundImage.src})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          width: "100vw",
+          height: "100vh",
+        }}
+      className="p-8">
+        <p className="text-2xl text-[white]">Put your money where you mouth is</p>
       </div>
 
       <div className="bg-black text-white w-full p-8">
