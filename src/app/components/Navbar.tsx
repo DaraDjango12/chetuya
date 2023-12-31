@@ -7,9 +7,9 @@ import { TfiAlignJustify } from "react-icons/tfi";
 
 const NavList = [
   { name: "Home", link: "/" },
-  { name: "Post Odds", link: "/privacy" },
-  { name: "Check Odds", link: "/privacy" },
-  { name: "Terms and Conditions ", link: "/t&c" },
+  { name: "Post Odds", link: "/pages/privacypolicy" },
+  { name: "Check Odds", link: "/pages/privacypolicy" },
+  { name: "Terms and Conditions ", link: "/pages/termsofservice" },
 ];
 
 interface MobileMenuProps {
@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
       <nav className="mt-4">
         {/* mobile nav */}
         <div className="block md:hidden">
-          <div className="flex item-center justify-between ">
+          <div className="flex item-center justify-between  ">
             <div className="text-2xl">CHETAYA</div>
             <div>
               <TfiAlignJustify size={"2rem"} onClick={toggleMenu} />
@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
         {/* web Nav */}
         <div className="hidden md:block">
           <div className="flex item-center justify-between ">
-            <div>LOGOs</div>
+          <div className="text-2xl">CHETAYA</div>
             <div className="flex justify-between item-center gap-4  ">
               {NavList.map((item, i) => (
                 <Link key={i} href={item.link}>
