@@ -7,10 +7,20 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Login from "./user/login/page";
 import Register from "./user/register/page";
+import Modal from "./components/Modal";
 
 export default function Home() {
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
+
+  // const openModal = () => {
+  //   setIsOpen(!isOpen);
+  // };
+
+  // const closeModal = () => {
+  //   setIsOpen(!showLogin);
+  // };
 
   return (
     <main className=" w-full min-h-screen ">
@@ -71,7 +81,10 @@ export default function Home() {
               >
                 Join
               </Button>
-              {showRegister && <Register/>}
+              <Modal isOpen={showRegister} onClose={()=>{setShowRegister(false)}}>
+                <Register />
+              </Modal>
+              {/* {showRegister && <Register />} */}
               <Button
                 onClick={(event: any) => {
                   setShowLogin(!showLogin);
@@ -80,7 +93,10 @@ export default function Home() {
               >
                 Login
               </Button>
-              {showLogin && <Login/>}
+              
+              <Modal isOpen={showLogin} onClose={()=>{setShowLogin(false)}}>
+                <Login />
+              </Modal>
             </div>
           </div>
         </div>
